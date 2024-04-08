@@ -26,7 +26,6 @@ const NavBar = () => {
       <div className='flex items-center justify-between mt-[10px] text-right w-[50%]'>
         {isSmallScreen ? 
         <div>
-            <a className='decoration-none cursor-pointer text-grey text-[1.25rem]' href="#">Menu</a>
             <Sidebar/>
         </div>
             :
