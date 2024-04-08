@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Developer Takehome Assignment
+
+Welcome to My Frontend Developer Takehome Assignment!
+
+## Introduction
+
+Thank you for considering me for the frontend developer position at leadlly. I'm excited to take on this takehome assignment as a part of the process. Below you'll find the Link of the Completed Assignemt [Posting Soon].
+
+## Tech Stack Used
+React.js
+Next.js
+Tailwindcss
+TypeScript
 
 ## Getting Started
 
