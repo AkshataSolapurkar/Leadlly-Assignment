@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import Sidebar from "./Sidebar"
 import { useState,useEffect } from 'react'
-import data from './data'
+import data from './solutiondata'
 
 const NavBar = () => {
   const[dataprop,setdataprop] =useState(data)

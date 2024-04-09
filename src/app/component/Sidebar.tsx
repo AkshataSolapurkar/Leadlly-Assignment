@@ -3,21 +3,36 @@
 import { useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { DataItem } from '../../../types';
-import data from './data';
+import data from './solutiondata';
+import developerData from './developdata';
+import Resources from './resourcesdata';
+
 
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState(false);
+  const [developer,setdeveloper] =useState(false)
+  const [Resource,setResource]= useState(false)
+  const [activeresourceLink, setActiveresourceLink] = useState(false);
+  const [activedeveloperLink, setActivedeveloperLink] = useState(false);
+  const [activesolutionLink, setActivesolutionLink] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   }
 
-  const toggleLink = () => {
-    setActiveLink(!activeLink)
+  const togglesolutionLink = () => {
+    setActivesolutionLink(!activesolutionLink)
     setIsOpen(true); // Open sidebar when link is clicked
+  };
+  const toggledeveloperLink = () => {
+    setActivedeveloperLink(!activedeveloperLink)
+    setdeveloper(true); // Open sidebar when link is clicked
+  };
+
+  const toggleresourceLink = () => {
+    setActiveresourceLink(!activeresourceLink)
+    setResource(true); // Open sidebar when link is clicked
   };
 
   return (
@@ -25,14 +40,14 @@ const Sidebar = () => {
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className='p-[15px] relative w-full h-full z-[9999] bg-white'>
         <div className='m-0 pl-0 flex flex-col text-left'>
-          <div className='flex justify-between items-center'>
+          <div className='flex justify-between items-center mb-[15px]'>
           <a className='relative w-full py-[3px] text-[15px] text-grey' href="#">Solution</a>
-          <button className='relative py-[3px] text-[15px] text-grey' onClick={toggleLink}>v</button>
+          <button className='relative py-[3px] text-[15px] text-grey' onClick={togglesolutionLink}>v</button>
           </div>
           {data.map((items) => {
             const {id,img,name} = items;
             return <div className='flex flex-co h-auto p-0'>
-            {activeLink ? 
+            {activesolutionLink ? 
             <div className='mt-[15px] text-grey '>
               <div className='mb-[10px] '>
                <Link href="/Navbar.tsx" className="flex gap-2 items-center">
@@ -49,11 +64,57 @@ const Sidebar = () => {
             </div>
           })}
           
-        
-        <a className='relative w-full mb-[15px] py-[3px] text-[15px] text-grey' href="#">Develop</a>
+
+          <div className='flex justify-between mb-[15px] items-center'>
+          <a className='relative w-full py-[3px] text-[15px] text-grey' href="#">Developer</a>
+          <button className='relative py-[3px] text-[15px] text-grey' onClick={toggledeveloperLink}>v</button>
+          </div>
+          {developerData.map((items) => {
+            const {id,img,name} = items;
+            return <div className='flex flex-co h-auto p-0'>
+            {activedeveloperLink ? 
+            <div className='mt-[15px] text-grey '>
+              <div className='mb-[10px] '>
+               <Link href="/Navbar.tsx" className="flex gap-2 items-center">
+                 <span className=''>
+                   <Image src={img} width={32} height={32} className="" alt='pic'/>
+                 </span>
+                 <span><p>{name}</p></span>
+               </Link>
+              </div>
+            </div>
+            :
+            <></>
+            }
+            </div>
+          })}
+          
         <a className='relative w-full mb-[15px] py-[3px] text-[15px] text-grey' href="#">Examples</a>
         <a className='relative w-full mb-[15px] py-[3px] text-[15px] text-grey' href="#">Pricing</a>
-        <a className='relative w-full mb-[15px] py-[3px] text-[15px] text-grey' href="#">Resources</a>
+
+        <div className='flex justify-between mb-[15px] items-center'>
+          <a className='relative w-full py-[3px] text-[15px] text-grey' href="#">Resources</a>
+          <button className='relative py-[3px] text-[15px] text-grey' onClick={toggleresourceLink}>v</button>
+          </div>
+          {Resources.map((items) => {
+            const {id,img,name} = items;
+            return <div className='flex flex-co h-auto p-0'>
+            {activeresourceLink ? 
+            <div className='mt-[15px] text-grey '>
+              <div className='mb-[10px] '>
+               <Link href="/Navbar.tsx" className="flex gap-2 items-center">
+                 <span className=''>
+                   <Image src={img} width={32} height={32} className="" alt='pic'/>
+                 </span>
+                 <span><p>{name}</p></span>
+               </Link>
+              </div>
+            </div>
+            :
+            <></>
+            }
+            </div>
+          })}
         </div>
         
         </div>
