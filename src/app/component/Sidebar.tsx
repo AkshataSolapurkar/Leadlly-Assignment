@@ -6,8 +6,8 @@ import Image from "next/image";
 import data from './solutiondata';
 import developerData from './developdata';
 import Resources from './resourcesdata';
-
-
+import Social from './social';
+import Buttoncomp from './Buttoncomp';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -115,6 +115,13 @@ const Sidebar = () => {
             }
             </div>
           })}
+           <Social/>
+           <div className='mt-[30px]'>
+           <Buttoncomp title=' START YOUR FREE TRIAL '/>
+           <Buttoncomp title=' +91-8010-117-117 '/> 
+           <Buttoncomp title=' REQUEST A DEMO '/>
+           </div>
+           
         </div>
         
         </div>
@@ -133,6 +140,7 @@ const Sidebar = () => {
           position: fixed;
           top: 0;
           box-shadow: 0 -7px 8px 1px #000;
+          background-color:white;
           right: 0;
           overflow-y: auto;
           overflow-x: hidden;

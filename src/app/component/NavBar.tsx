@@ -22,8 +22,8 @@ const NavBar = () => {
 
   return (
     <div className='justify-between items-center px-[15px] py-[15px] flex shadow-custom w-full fixed'>
-      <div className='mx-[15px] mt-[] container'>
-        <Image src="/logo.png" alt='logo' width={150} height={42}/>
+      <div className='mx-[15px] mt-[] container z-[-1]'>
+        <Image src="/logo.png" alt='logo' width={150} className='z-10' height={42}/>
       </div>
       <div className='flex items-center justify-between mt-[10px] text-right w-[50%]'>
         {isSmallScreen ? 
