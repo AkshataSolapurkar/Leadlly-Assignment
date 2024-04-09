@@ -3,8 +3,10 @@ import Image from 'next/image'
 import React from 'react'
 import Sidebar from "./Sidebar"
 import { useState,useEffect } from 'react'
+import data from './data'
 
 const NavBar = () => {
+  const[dataprop,setdataprop] =useState(data)
    const [isSmallScreen, setIsSmallScreen] = useState(false);
    const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 1023); // 768px is the breakpoint for md screen size
