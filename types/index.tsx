@@ -3,3 +3,6 @@ export interface DataItem {
     name: string;
     img: string;
   }
+  export interface Buttonprop {
+    title: string;
+  }
