@@ -8,6 +8,7 @@ import developerData from './developdata';
 import Resources from './resourcesdata';
 import Social from './social';
 import Buttoncomp from './Buttoncomp';
+import { Menu } from 'lucide-react';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -129,7 +130,7 @@ const Sidebar = () => {
       <div className="button-container">
         <button className="text-right" onClick={toggleSidebar}>
           {isOpen ? 
-          <div className='bg-gray-300 rounded-full text-center flex w-[30px] h-[30px] items-center justify-center mb-[15px]'>x</div>  : "Open Sidebar"}
+          <div className='bg-gray-300 rounded-full text-center flex w-[30px] h-[30px] items-center justify-center mb-[15px]'>x</div>  : <Menu/>}
         </button>
       </div>
       <style jsx>{`
