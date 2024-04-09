@@ -21,7 +21,8 @@ const config: Config = {
         "second": '#202225',
         'blck': '#000000',
         'white': '#ffffff',
-        "grey":"#4d4d4d"
+        "grey":"#4d4d4d",
+        "descgrey":"#949494"
       },
       boxShadow: {
         'custom': '0 1px 2px 1px rgba(236, 236, 236, 0.5)',
