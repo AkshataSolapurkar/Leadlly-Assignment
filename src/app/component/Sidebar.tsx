@@ -1,6 +1,11 @@
-// components/Sidebar.js
+
 "use client"
 import { useState } from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import { DataItem } from '../../../types';
+import data from './data';
+
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,17 +26,29 @@ const Sidebar = () => {
         <div className='p-[15px] relative w-full h-full z-[9999] bg-white'>
         <div className='m-0 pl-0 flex flex-col text-left'>
           <div className='flex justify-between items-center'>
-          <a className='relative w-full mb-[15px] py-[3px] text-[15px] text-grey' href="#">Solution</a>
-          <button className='relative mb-[15px] py-[3px] text-[15px] text-grey' onClick={toggleLink}>v</button>
+          <a className='relative w-full py-[3px] text-[15px] text-grey' href="#">Solution</a>
+          <button className='relative py-[3px] text-[15px] text-grey' onClick={toggleLink}>v</button>
           </div>
-          <div className='flex flex-col'></div>
-           {activeLink ? 
-           <div className=''>
-             <div>Content for Link 1</div>
-           </div>
-           :
-           <></>
-           }
+          {data.map((items) => {
+            const {id,img,name} = items;
+            return <div className='flex flex-co h-auto p-0'>
+            {activeLink ? 
+            <div className='mt-[15px] text-grey '>
+              <div className='mb-[10px] '>
+               <Link href="/Navbar.tsx" className="flex gap-2 items-center">
+                 <span className=''>
+                   <Image src={img} width={32} height={32} className="" alt='pic'/>
+                 </span>
+                 <span><p>{name}</p></span>
+               </Link>
+              </div>
+            </div>
+            :
+            <></>
+            }
+            </div>
+          })}
+          
         
         <a className='relative w-full mb-[15px] py-[3px] text-[15px] text-grey' href="#">Develop</a>
         <a className='relative w-full mb-[15px] py-[3px] text-[15px] text-grey' href="#">Examples</a>
