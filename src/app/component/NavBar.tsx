@@ -28,7 +28,7 @@ const NavBar = () => {
     
 
   return (
-    <div className='mx-[15px] my-[15px] container z-[-1] relativeS'>
+    <div className='mx-[0px] px-[20px] my-[15px] container absolute'>
       <div className='flex items-center justify-between'>
       <div className=''>
         <Image src="/logo.png" alt='logo' width={150} className='z-10' height={42}/>
@@ -38,9 +38,9 @@ const NavBar = () => {
             :
             <OrignalNavbar/>
         }
-      <div className='hidden lg:flex justify-evenly gap-5 items-center'>
+      <div className='hidden lg:flex gap-5 justify-evenly items-center'>
       <Buttoncomp title='CONTACT US'/>
-      <Menu className='mt-[12px]'/>
+      <Menu className='z-[1000] relative mt-[12px]'/>
       </div>
       
       </div>
