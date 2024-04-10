@@ -38,7 +38,7 @@ const OrignalNavbar = () => {
               <button className='flex relative'>Solution <ChevronDown onClick={toggleDropdown} className='text-grey w-[30px]'/></button>
               {/* Dropdown content */}
               {showDropdown && (
-                <div className='absolute w-[616px] h-[552px] grid grid-cols-2 grid-rows-7 gap-4 py-[35px] flex-wrap min-w-[160px] max-h-[647px] min-h-[400px] z-[1000] top-full left-0 mt-1 bg-white shadow-lg rounded-md'>
+                <div className='absolute top-[calc(100% + 10px)] left-0  w-[616px] h-[552px] grid grid-cols-2 grid-rows-7 gap-4 py-[35px] flex-wrap min-w-[160px] max-h-[647px] min-h-[400px] z-[1000] top-full mt-1 bg-white shadow-lg rounded-md'>
                   {data.map((item) => (
                     <div className='px-[15px] py-[15px]'>
                      <div className='flex items-center gap-2'>
