@@ -38,7 +38,7 @@ const NavBar = () => {
             :
             <OrignalNavbar/>
         }
-      <div className='flex justify-evenly gap-5 items-center'>
+      <div className='hidden lg:flex justify-evenly gap-5 items-center'>
       <Buttoncomp title='CONTACT US'/>
       <Menu className='mt-[12px]'/>
       </div>
