@@ -3,37 +3,44 @@ const Resources = [
     {
       id: 1,
       img: './themes.svg',
-      name: "Themes"
+      name: "Themes",
+      desc:"Beautiful themes optimized for multiple devices"
     },
     {
         id: 2,
         img: './themes.svg',
-        name: "About Us"
+        name: "About Us",
+        desc:"Everything about StoreHippos origin, vision & mission"
       },
       {
         id: 3,
         img: './themes.svg',
-        name: "Contact Us"
+        name: "Contact Us",
+        desc:"Get in touch with StoreHippo support"
       },
       {
         id: 4,
         img: './themes.svg',
-        name: "Blog"
+        name: "Blog",
+        desc:"E-commerce trends, tips and expert guidance"
       },
       {
         id: 5,
         img: './themes.svg',
-        name: "Whitepaper"
+        name: "Whitepaper",
+        desc:"Data-driven insights on Ecommerce topics and trends"
       },
       {
         id: 6,
         img: './themes.svg',
-        name: "Forum"
+        name: "Forum",
+        desc:"Exchange experience & views on StoreHippo"
       },
       {
         id: 7,
         img: './themes.svg',
-        name: "Help Center"
+        name: "Help Center",
+        desc:"How to guides to use StoreHippo"
       }
   ];
   export default Resources;

@@ -10,3 +10,11 @@
   --blck-color: #000000;
   --white-color: #ffffff;
 }
+.custom-background {
+  background-image: url('/sliders-bg.png'); 
+  background-repeat: no-repeat;
+  background-position: calc(100% + 140px) top;
+  background-size: 100%;
+  z-index: 0;
+  right: -50%;
+}

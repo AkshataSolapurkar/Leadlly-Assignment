@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Buttoncomp from './Buttoncomp'
 import { ChevronDown } from 'lucide-react'
 import data from './solutiondata'
+import developerData from './developdata'
+import Resources from './resourcesdata'
 import Image from 'next/image'
 
 const OrignalNavbar = () => {
@@ -55,12 +57,22 @@ const OrignalNavbar = () => {
             </div>
 
             <div className='relative'>
-              <button className='flex relative' >Devloper <ChevronDown onClick={toggledeveloperLink} className='text-grey w-[30px]'/></button>
+              <button className='flex relative'>Developer <ChevronDown onClick={toggledeveloperLink} className='text-grey w-[30px]'/></button>
               {/* Dropdown content */}
-              {developer && (
-                <div className='absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md'>
-                  {data.map((item) => (
-                    <Link key={item.id} href="#">{item.name}</Link>
+              {developer&& (
+                <div className='absolute w-[616px] h-[552px] grid grid-cols-2 grid-rows-7 gap-4 py-[35px] flex-wrap min-w-[160px] max-h-[647px] min-h-[400px] z-[1000] top-full left-0 mt-1 bg-white shadow-lg rounded-md'>
+                  {developerData.map((item) => (
+                    <div className='px-[15px] py-[15px]'>
+                     <div className='flex items-center gap-2'>
+                     <Image width={32} height={32} alt='pic' src={item.img}/>
+                     <div className='flex flex-col'>
+                     <Link className='text-grey text-[16px]' key={item.id} href="#">{item.name}</Link>
+                     <span className='text-descgrey font-normal'>{item.desc}</span>
+                     </div>
+                     </div>
+                    
+                    </div>
+                    
                   ))}
                 </div>
               )}
@@ -70,12 +82,22 @@ const OrignalNavbar = () => {
             <Link className='flex relative' href="#">Pricing</Link>
             
             <div className='relative'>
-              <button onClick={toggleresourceLink} className='flex relative'>Devloper <ChevronDown className='text-grey w-[30px]'/></button>
+              <button className='flex relative'>Resources <ChevronDown onClick={toggleresourceLink} className='text-grey w-[30px]'/></button>
               {/* Dropdown content */}
-              {Resource && (
-                <div className='absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md'>
-                  {data.map((item) => (
-                    <Link key={item.id} href="#">{item.name}</Link>
+              {Resource&& (
+                <div className='absolute w-[616px] h-[552px] grid grid-cols-2 grid-rows-7 gap-4 py-[35px] flex-wrap min-w-[160px] max-h-[647px] min-h-[400px] z-[1000] top-full left-0 mt-1 bg-white shadow-lg rounded-md'>
+                  {Resources.map((item) => (
+                    <div className='px-[15px] py-[15px]'>
+                     <div className='flex items-center gap-2'>
+                     <Image width={32} height={32} alt='pic' src={item.img}/>
+                     <div className='flex flex-col'>
+                     <Link className='text-grey text-[16px]' key={item.id} href="#">{item.name}</Link>
+                     <span className='text-descgrey font-normal'>{item.desc}</span>
+                     </div>
+                     </div>
+                    
+                    </div>
+                    
                   ))}
                 </div>
               )}
