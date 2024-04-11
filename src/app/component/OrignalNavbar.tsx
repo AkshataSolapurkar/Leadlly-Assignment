@@ -16,6 +16,8 @@ const OrignalNavbar = () => {
 
     const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
+        setResource(false);
+        setdeveloper(false)
       };
     
       const togglesolutionLink = () => {
@@ -24,12 +26,16 @@ const OrignalNavbar = () => {
       };
       const toggledeveloperLink = () => {
         
-        setdeveloper(!developer); // Open sidebar when link is clicked
+        setdeveloper(!developer);
+        setResource(false)
+        setShowDropdown(false) // Open sidebar when link is clicked
       };
     
       const toggleresourceLink = () => {
         
-        setResource(!Resource); // Open sidebar when link is clicked
+        setResource(!Resource);
+        setdeveloper(false)
+        setShowDropdown(false) // Open sidebar when link is clicked
       };  
   return (
     <div className='flex justify-evenly gap-10 text-grey mt-[10px] text-[15px]'>
