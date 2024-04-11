@@ -9,15 +9,25 @@
   --second-color: #4d4d4d;
   --blck-color: #000000;
   --white-color: #ffffff;
+  --text-hero:#303030;
 }
-.custom-background {
-  background-image: url('/sliders-bg.png'); 
-  background-repeat: no-repeat;
-  background-position: calc(100% + 140px) top;
-  background-size: 100%;
-  z-index: 0;
-  right: -50%;
+@media (min-width: 1024px) {
+  .custom-background {
+    background-image: url('/sliders-bg.png'); 
+    background-repeat: no-repeat;
+    background-position: calc(100% + 50px) top;
+    background-size: 50%;
+    z-index: 0;
+    right: -50%;
+  }
 }
 .custom-overflow{
   overflow: unset;
+}
+.custom-hero-background {
+  background-image: url("/herotext.png");
+  background-repeat: no-repeat;
+  background-position: 80px center;
+  background-size: 50%;
+  padding: 50px 0;
 }
