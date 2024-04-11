@@ -12,6 +12,7 @@ import { Menu } from 'lucide-react';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const[solution,setsolution] = useState(false)
   const [developer,setdeveloper] =useState(false)
   const [Resource,setResource]= useState(false)
   const [activeresourceLink, setActiveresourceLink] = useState(false);
@@ -23,17 +24,22 @@ const Sidebar = () => {
   }
 
   const togglesolutionLink = () => {
-    setActivesolutionLink(!activesolutionLink)
-    setIsOpen(true); // Open sidebar when link is clicked
+    setsolution(!solution);
+    setdeveloper(false)
+    setResource(false)
+     // Open sidebar when link is clicked
   };
   const toggledeveloperLink = () => {
-    setActivedeveloperLink(!activedeveloperLink)
-    setdeveloper(true); // Open sidebar when link is clicked
+    setdeveloper(!developer);
+     setsolution(false)
+     setResource(false)// Open sidebar when link is clicked
   };
 
   const toggleresourceLink = () => {
-    setActiveresourceLink(!activeresourceLink)
-    setResource(true); // Open sidebar when link is clicked
+    setResource(!Resource);
+    setsolution(false)
+    setdeveloper(false)
+     // Open sidebar when link is clicked
   };
 
   return (
@@ -42,13 +48,13 @@ const Sidebar = () => {
         <div className='p-[15px] relative w-full h-full z-[9999] bg-white'>
         <div className='m-0 pl-0 flex flex-col text-left'>
           <div className='flex justify-between items-center mb-[15px]'>
-          <a className='relative w-full py-[3px] text-[15px] text-grey' href="#">Solution</a>
+          <a onClick={togglesolutionLink} className='relative w-full py-[3px] text-[15px] text-grey' href="#">Solution</a>
           <button className='relative py-[3px] text-[15px] text-grey' onClick={togglesolutionLink}>v</button>
           </div>
           {data.map((items) => {
             const {id,img,name} = items;
             return <div className='flex flex-co h-auto p-0'>
-            {activesolutionLink ? 
+            {solution ? 
             <div className='mt-[15px] text-grey '>
               <div className='mb-[10px] '>
                <Link href="/Navbar.tsx" className="flex gap-2 items-center">
@@ -67,13 +73,13 @@ const Sidebar = () => {
           
 
           <div className='flex justify-between mb-[15px] items-center'>
-          <a className='relative w-full py-[3px] text-[15px] text-grey' href="#">Developer</a>
+          <a onClick={toggledeveloperLink} className='relative w-full py-[3px] text-[15px] text-grey' href="#">Developer</a>
           <button className='relative py-[3px] text-[15px] text-grey' onClick={toggledeveloperLink}>v</button>
           </div>
           {developerData.map((items) => {
             const {id,img,name} = items;
             return <div className='flex flex-co h-auto p-0'>
-            {activedeveloperLink ? 
+            {developer ? 
             <div className='mt-[15px] text-grey '>
               <div className='mb-[10px] '>
                <Link href="/Navbar.tsx" className="flex gap-2 items-center">
@@ -94,13 +100,13 @@ const Sidebar = () => {
         <a className='relative w-full mb-[15px] py-[3px] text-[15px] text-grey' href="#">Pricing</a>
 
         <div className='flex justify-between mb-[15px] items-center'>
-          <a className='relative w-full py-[3px] text-[15px] text-grey' href="#">Resources</a>
+          <a onClick={toggleresourceLink} className='relative w-full py-[3px] text-[15px] text-grey' href="#">Resources</a>
           <button className='relative py-[3px] text-[15px] text-grey' onClick={toggleresourceLink}>v</button>
           </div>
           {Resources.map((items) => {
             const {id,img,name} = items;
             return <div className='flex flex-co h-auto p-0'>
-            {activeresourceLink ? 
+            {Resource ? 
             <div className='mt-[15px] text-grey '>
               <div className='mb-[10px] '>
                <Link href="/Navbar.tsx" className="flex gap-2 items-center">

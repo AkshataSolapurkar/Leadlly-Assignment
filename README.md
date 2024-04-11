@@ -4,13 +4,17 @@ Welcome to My Frontend Developer Takehome Assignment!
 
 ## Introduction
 
-Thank you for considering me for the frontend developer position at leadlly. I'm excited to take on this takehome assignment as a part of the process. Below you'll find the Link of the Completed Assignemt [Posting Soon].
+Thank you for considering me for the frontend developer position at leadlly. I'm excited to take on this takehome assignment as a part of the process. Below you'll find the Link of the Completed Assignemt [https://leadlly-assignment.vercel.app/].
 
 ## Tech Stack Used
 React.js
 Next.js
 Tailwindcss
 TypeScript
+
+## UI libraries
+Headless UI
+Lucid React for Icons
 
 ## Getting Started
 
