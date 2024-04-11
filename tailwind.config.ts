@@ -24,6 +24,7 @@ const config: Config = {
         "grey":"#4d4d4d",
         "descgrey":"#949494",
         "text-hero":"#303030",
+        "greenHover":"#c6eb95"
       },
       boxShadow: {
         'custom': '0 1px 2px 1px rgba(236, 236, 236, 0.5)',
